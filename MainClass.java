@@ -5,15 +5,23 @@ import java.io.*;
 public class MainClass {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+        /*
         Shape rectangle = new Rectangle(4.3, 7);
         Shape circle = new Circle(2.5);
         Shape isoscelesTriangle = new IsoscelesTriangle(2, 4.6);
+        */
+        
+        Shape[] shapes = new Shape();
+        shapes[0] = new Rectangle(4.3, 7);
+        shapes[1] = new Circle(2.5);
+        shapes[2] = new  new IsoscelesTriangle(2, 4.6);
 
         System.out.println(isoscelesTriangle);
 
-        File file = new File("text.txt");
-        if (file.exists()) file.createNewFile();
-
+   /*     File file = new File("text.txt");
+        if (file.exists()) file.createNewFile();*/
+        
+    
         writeToFile(file, isoscelesTriangle);
         getClonedObject(file);
 
